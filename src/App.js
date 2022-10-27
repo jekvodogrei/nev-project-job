@@ -6,20 +6,11 @@ import DataApp from "./components/DataApp/DataApp";
 
 import "./App.css";
 
-const LS_KEY = "reader_item_index";
-
 function App() {
-  const [clickOpenList, setClickOpenList] = useState("");
-  const [items, setItems] = useState(() => {
-    const savedState = localStorage.getItem(LS_KEY);
-    return savedState ? Number(savedState) : 0;
-  });
-  useEffect(() => {
-    document.title = clickOpenList;
-  });
-
+  const [texts, setTexts] = useState();
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [clickOpenList, setClickOpenList] = useState("");
 
   const changeIndex = (items) => {
     loadMore((prevIndex) => prevIndex + items);
@@ -31,7 +22,7 @@ function App() {
       .then(
         (result) => {
           setIsLoaded(true);
-          setItems(result);
+          setTexts(result);
         },
         (error) => {
           setIsLoaded(true);
@@ -53,19 +44,17 @@ function App() {
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path="/nev-project-job/"
             element={
               <DataApp
-                items={items}
-                setItems={setItems}
-                clickOpenList={clickOpenList}
+                texts={texts}
                 setClickOpenList={setClickOpenList}
                 changeIndex={changeIndex}
               />
             }
           ></Route>
           <Route
-            path="/List"
+            path="/nev-project-job/List"
             element={<List clickOpenList={clickOpenList} />}
           ></Route>
         </Routes>

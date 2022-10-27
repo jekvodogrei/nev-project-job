@@ -8,7 +8,7 @@ const List = function ({ clickOpenList }) {
     <div>
       <P>{clickOpenList}</P>
 
-      <Link to="/">
+      <Link to="/nev-project-job/">
         <Button>Back</Button>
       </Link>
     </div>

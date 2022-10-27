@@ -2,7 +2,7 @@
   "name": "nev_project_job",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jekvodogrei.github.io/nev_project_job",
+  "homepage": "https://jekvodogrei.github.io/nev-project-job",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

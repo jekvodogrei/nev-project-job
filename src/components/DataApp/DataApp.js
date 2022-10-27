@@ -5,32 +5,25 @@ import { LiData } from "./DataApp.styled";
 
 const linkStyle = { textDecoration: "none", color: "black" };
 
-const DataApp = ({
-  items,
-  setItems,
-  clickOpenList,
-  setClickOpenList,
-  changeIndex,
-}) => {
+const DataApp = ({ texts, setClickOpenList, changeIndex }) => {
   return (
     <div>
       <nav>
         <ul>
-          {items.map((item) => {
+          {texts.map((text) => {
             return (
               <LiData
-                key={item}
+                key={text}
                 onClick={(e) => {
-                  setClickOpenList(clickOpenList + item);
+                  setClickOpenList(text);
                 }}
               >
-                <Link to="List" item={item} style={linkStyle}>
-                  {item.slice(0, item.indexOf("."))}...
+                <Link to="List" item={text} style={linkStyle}>
+                  {text.slice(0, text.indexOf("."))}...
                 </Link>
               </LiData>
             );
           })}
-          {/* <p>{clickOpen}</p> */}
         </ul>
       </nav>
 
