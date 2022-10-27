@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nev-project-job/static/css/main.3fbda5d3.css",
-    "main.js": "/nev-project-job/static/js/main.2f5b44da.js",
+    "main.js": "/nev-project-job/static/js/main.b5db86d6.js",
     "index.html": "/nev-project-job/index.html",
     "main.3fbda5d3.css.map": "/nev-project-job/static/css/main.3fbda5d3.css.map",
-    "main.2f5b44da.js.map": "/nev-project-job/static/js/main.2f5b44da.js.map"
+    "main.b5db86d6.js.map": "/nev-project-job/static/js/main.b5db86d6.js.map"
   },
   "entrypoints": [
     "static/css/main.3fbda5d3.css",
-    "static/js/main.2f5b44da.js"
+    "static/js/main.b5db86d6.js"
   ]
 }
